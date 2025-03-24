@@ -1,4 +1,4 @@
 package com.example.pizza.controller;
 
-public class OrdreController {
+public class UserController {
 }
