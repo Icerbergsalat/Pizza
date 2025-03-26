@@ -7,7 +7,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import java.util.List;
 
 public class UserRepository {
-    private final JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;
+
+    public UserRepository() {
+    }
 
     public UserRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
