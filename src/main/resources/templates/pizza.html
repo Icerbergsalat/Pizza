@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSRS Website</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class="content">
+    <div class="item">
+        <h1>choose your pizza</h1>
+        <div class="pizzaWindow" id="pizza_bases">
+            <div class="pizza" th:each="Pizza : ${pizzas}">
+                <img th:src="${Pizza.getPizzaImg()}" alt="">
+                <h2 th:text="${Pizza.getName()}">placeholder</h2>
+                <h2 th:text="${Pizza.getDescription()}">placeholder</h2>
+                <h2 th:text="${Pizza.getPrice()}">placeholder</h2>
+                <h2 th:text="${Pizza.getTopping()}">placeholder</h2>
+                <button><a th:href="@{'/pizza/' + ${Pizza.getId()}}">choose pizza</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -8,7 +8,11 @@ import java.util.List;
 
 @Service
 public class PizzaService {
-    private final PizzaRepository pizzaRepository;
+    private PizzaRepository pizzaRepository;
+
+    public PizzaService(){
+
+    }
 
     public PizzaService(PizzaRepository pizzaRepository) {
         this.pizzaRepository = pizzaRepository;

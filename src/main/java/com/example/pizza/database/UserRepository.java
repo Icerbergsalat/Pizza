@@ -1,6 +1,7 @@
 package com.example.pizza.database;
 
 import com.example.pizza.model.User;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
