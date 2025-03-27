@@ -4,18 +4,18 @@ import com.example.pizza.model.User;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class UserRepository {
-    private JdbcTemplate jdbcTemplate;
-
-    public UserRepository() {
-    }
+    private final JdbcTemplate jdbcTemplate;
 
     public UserRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
+
     public User save(User user) {
         String sql = "INSERT INTO users (name, email, address, bonusPoints) VALUES (?, ?, ?, ?)";
         jdbcTemplate.update(sql, user.getName(), user.getEmail(), user.getAddress(), user.getBonusPoints());

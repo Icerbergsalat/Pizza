@@ -10,10 +10,6 @@ import java.util.List;
 public class OrderService {
     private OrderRepository orderRepository;
 
-    public OrderService(){
-
-    }
-
     public OrderService(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }

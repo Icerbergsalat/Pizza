@@ -5,17 +5,19 @@ public class Pizza {
     String name;
     String description;
     double price;
-    String topping;
-    String pizzaImg;
+    int fkTopping;
+    String image;
 
-    public Pizza(int id, String name, String description, double price, String topping, String pizzaImg) {
+    public Pizza(int id, String name, String description, double price, int fkTopping, String image) {
         this.name = name;
         this.description = description;
         this.price = price;
-        this.topping = topping;
+        this.fkTopping = fkTopping;
         this.id = id;
-        this.pizzaImg = pizzaImg;
+        this.image = image;
     }
+
+    public Pizza() {}
 
     public String getName() {
         return name;
@@ -29,15 +31,15 @@ public class Pizza {
         return price;
     }
 
-    public String getTopping() {
-        return topping;
+    public int getTopping() {
+        return fkTopping;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getPizzaImg() {
-        return pizzaImg;
+    public String getImage() {
+        return image;
     }
 }

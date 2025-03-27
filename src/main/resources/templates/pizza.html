@@ -12,7 +12,7 @@
         <h1>choose your pizza</h1>
         <div class="pizzaWindow" id="pizza_bases">
             <div class="pizza" th:each="Pizza : ${pizzas}">
-                <img th:src="${Pizza.getPizzaImg()}" alt="">
+                <img th:src="${Pizza.getImage()}" alt="">
                 <h2 th:text="${Pizza.getName()}">placeholder</h2>
                 <h2 th:text="${Pizza.getDescription()}">placeholder</h2>
                 <h2 th:text="${Pizza.getPrice()}">placeholder</h2>

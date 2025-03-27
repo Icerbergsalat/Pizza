@@ -24,6 +24,6 @@ public class UserController {
         users.add(new User("goku", "goku@namek.com", "439 East District, Mount Paozu", 5));
         users.add(new User("Walter White", "walter.white5@hotmail.com", "308 Negra Arroyo Lane", 5));
         model.addAttribute("users", users);
-        return "user";
+        return "login";
     }
 }

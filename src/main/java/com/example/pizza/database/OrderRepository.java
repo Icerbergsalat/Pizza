@@ -3,15 +3,13 @@ package com.example.pizza.database;
 import com.example.pizza.model.Order;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class OrderRepository {
-    private JdbcTemplate jdbcTemplate;
-
-    public OrderRepository(){
-
-    }
+    private final JdbcTemplate jdbcTemplate;
 
     public OrderRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;

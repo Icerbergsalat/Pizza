@@ -25,8 +25,8 @@ public class PizzaController {
     }
 
     @GetMapping("/pizza/{id}")
-    public String get(@PathVariable int id, Model model){
+    public String get(@PathVariable String id, Model model){
         model.addAttribute("pizza", id);
-        return "pizza";
+        return "pizza_view";
     }
 }

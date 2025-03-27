@@ -10,10 +10,6 @@ import java.util.List;
 public class PizzaService {
     private PizzaRepository pizzaRepository;
 
-    public PizzaService(){
-
-    }
-
     public PizzaService(PizzaRepository pizzaRepository) {
         this.pizzaRepository = pizzaRepository;
     }
@@ -22,8 +18,12 @@ public class PizzaService {
         return pizzaRepository.save(pizza);
     }
 
-    public Pizza findPizzaByTopping(String topping) {
-        return pizzaRepository.findByTopping(topping);
+    public Pizza findPizzaByTopping(int fkTopping) {
+        return pizzaRepository.findByTopping(fkTopping);
+    }
+
+    public Pizza findPizzaById(int id) {
+        return pizzaRepository.findById(id);
     }
 
     public List<Pizza> findAllPizzas() {
